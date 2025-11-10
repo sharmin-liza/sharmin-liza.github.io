@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sharmin Akter Liza - Portfolio</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>Sharmin Akter <span id="liza">Li<span id="l">z</span>a</span></h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><button onclick="downloadCV()">Download CV</button></li>
+      </ul>
+      <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <div class="hero-text">
+          <h1>Hi, I'm <span>Sharmin Liza</span></h1>
+          <h2>Data Science & AI Enthusiast</h2>
+          <p>Turning data into insights and building intelligent solutions</p>
+          <div class="hero-buttons">
+            <a href="#contact" class="btn-primary">Contact Me</a>
+            <a href="#projects" class="btn-secondary">View Projects</a>
+          </div>
+        </div>
+        <div class="hero-image">          <img src="https://media.licdn.com/dms/image/v2/D5603AQFXQk1-0ynZBQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688624261918?e=1764201600&v=beta&t=mPRj6JTNOsoo3xRYB803SS7qnx30rnKWRA6uHseqgUs" alt="Sharmin Liza">
+          
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>
+            I am a passionate Computer Science student specializing in Data Science, Machine Learning, and Artificial Intelligence.
+            With a strong foundation in Python, Statistics, and Data Preprocessing, I solve real-world problems using tools like
+            Pandas, Scikit-learn, and TensorFlow.
+          </p>
+          <p>
+            I have worked on projects involving Air Quality Prediction, Network Intrusion
+            Detection, and Iris Flower Classification. My goal is to leverage data to create meaningful impact through AI solutions.
+          </p>
+          <div class="about-stats">
+            <div class="stat-item">
+              <span class="stat-number">10+</span>
+              <span class="stat-label">Projects</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">5+</span>
+              <span class="stat-label">Technologies</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years Learning</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <h2 class="section-title">My Skills</h2>
+      <div class="skills-container">
+        <ul class="skills-grid">
+          <li>
+            <i class="fab fa-python"></i>
+            <span>Python</span>
+          </li>
+          <li>
+            <i class="fas fa-database"></i>
+            <span>Pandas</span>
+          </li>
+          <li>
+            <i class="fas fa-calculator"></i>
+            <span>NumPy</span>
+          </li>
+          <li>
+            <i class="fas fa-chart-line"></i>
+            <span>Matplotlib</span>
+          </li>
+          <li>
+            <i class="fas fa-database"></i>
+            <span>SQL</span>
+          </li>
+          <li>
+            <i class="fas fa-chart-pie"></i>
+            <span>Data Analysis</span>
+          </li>
+          <li>
+            <i class="fas fa-robot"></i>
+            <span>Machine Learning</span>
+          </li>
+          <li>
+            <i class="fas fa-brain"></i>
+            <span>Scikit-learn</span>
+          </li>
+          <li>
+            <i class="fas fa-network-wired"></i>
+            <span>TensorFlow</span>
+          </li>
+          <li>
+            <i class="fab fa-html5"></i>
+            <span>HTML/CSS/JS</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2 class="section-title">My Projects</h2>
+      <div class="projects-container">
+        <div class="project">
+          <div class="project-icon">
+            <i class="fas fa-wind"></i>
+          </div>
+          <h3>Air Quality Index Prediction</h3>
+          <p>Built a machine learning model using regression to predict AQI based on environmental features with 92% accuracy.</p>
+          <div class="project-tags">
+            <span>Python</span>
+            <span>Scikit-learn</span>
+            <span>Pandas</span>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Network Intrusion Detection</h3>
+          <p>Developed an ML classifier using Random Forests and SVM to detect attacks using the NSL-KDD dataset with 94% recall.</p>
+          <div class="project-tags">
+            <span>Machine Learning</span>
+            <span>Cybersecurity</span>
+            <span>Python</span>
+          </div>
+        </div>
+        <div class="project">
+          <div class="project-icon">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h3>Iris Data Classification</h3>
+          <p>Used KNN and SVM to classify iris species. A beginner-friendly dataset but a great way to learn ML pipelines.</p>
+          <div class="project-tags">
+            <span>Classification</span>
+            <span>KNN</span>
+            <span>SVM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <h2 class="section-title">Education</h2>
+      <div class="education-container">
+        <div class="education-item">
+          <div class="education-icon">
+            <i class="fas fa-graduation-cap"></i>
+          </div>
+          <div class="education-details">
+            <h3>BSc in Computer Science & Engineering</h3>
+            <p class="institution">University of Creative Technology, Chittagong</p>
+            <p class="duration">2021 - Present</p>
+            <p class="description">Specializing in Data Science and Artificial Intelligence with coursework in machine learning, data mining, and big data analytics.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2 class="section-title">Get In Touch</h2>
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <i class="fas fa-envelope"></i>
+            <p><a href="mailto:rhsliza9@gmail.com">rhsliza9@gmail.com</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-linkedin"></i>
+            <p><a href="https://linkedin.com/in/sharmin-liza" target="_blank">linkedin.com/in/sharmin-liza</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="fab fa-github"></i>
+            <p><a href="https://github.com/in/sharmin-liza" target="_blank">github.com/in/sharmin-liza</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <p>Chattogram, Bangladesh</p>
+          </div>
+        </div>
+        <form class="contact-form">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <h2>Sharmin Akter <span>Liza</span></h2>
+        <p>Data Science & AI Enthusiast</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-social">
+        <h3>Connect With Me</h3>
+        <div class="social-icons">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-github"></i></a>
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Copyright &copy; 2025 Sharmin Akter Liza. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Chatbot Widget -->
+  <div class="chatbot-container">
+    <div class="chatbot-header">
+      <h3>AI Assistant</h3>
+      <button class="close-chatbot"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-messages">
+      <div class="chatbot-message">
+        <p>Hello! I'm Liza's AI assistant. How can I help you today?</p>
+      </div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" placeholder="Type your message...">
+      <button class="send-message"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+  <button class="chatbot-toggle">
+    <i class="fas fa-robot"></i>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
