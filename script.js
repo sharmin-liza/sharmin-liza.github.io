@@ -33,6 +33,23 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
   });
+
+  // Highlight active nav link based on visible section
+  const sections = document.querySelectorAll('section[id]');
+  const navLinksAll = document.querySelectorAll('nav a');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinksAll.forEach(a => a.classList.remove('active'));
+        const active = document.querySelector(`nav a[href="#${id}"]`);
+        if (active) active.classList.add('active');
+      }
+    });
+  }, { threshold: 0.5 });
+
+  sections.forEach(section => sectionObserver.observe(section));
   
   // Chatbot functionality
   const chatbotToggle = document.querySelector('.chatbot-toggle');
@@ -60,12 +77,19 @@ document.addEventListener('DOMContentLoaded', function() {
     addMessage(messageText, 'user');
     chatInput.value = '';
     
-    // Simulate bot thinking
+    // Simulate bot thinking with typing placeholder
+    const placeholder = document.createElement('div');
+    placeholder.classList.add('chatbot-message', 'bot', 'typing');
+    placeholder.innerHTML = `<p>...</p>`;
+    chatMessages.appendChild(placeholder);
+    chatMessages.scrollTop = chatMessages.scrollHeight;
+
     setTimeout(() => {
-      // Get bot response
       const botResponse = getBotResponse(messageText);
-      addMessage(botResponse, 'bot');
-    }, 1000);
+      placeholder.classList.remove('typing');
+      placeholder.innerHTML = `<p>${botResponse}</p>`;
+      chatMessages.scrollTop = chatMessages.scrollHeight;
+    }, 900 + Math.min(1200, messageText.length * 40));
   }
   
   // Add message to chat
@@ -86,6 +110,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const portfolioQuestions = ['projects', 'skills', 'experience', 'work'];
     const contactQuestions = ['contact', 'email', 'phone', 'reach', 'get in touch'];
     const helpQuestions = ['help', 'what can you do', 'options'];
+
+    // experience specific keywords
+    const youthKeywords = ['youth', 'innovation lab', 'winner', '2023'];
+    const internshipKeywords = ['intern', 'internship', 'codealpha', 'code alpha'];
+    const uctcKeywords = ['uctc', 'computer club', 'research', 'secretary'];
     
     if (greetings.some(word => userMessage.includes(word))) {
       return "Hello there! I'm Liza's AI assistant. How can I help you today?";
@@ -95,6 +124,12 @@ document.addEventListener('DOMContentLoaded', function() {
       return "Liza has worked on several projects including Air Quality Prediction, Network Intrusion Detection, and Iris Data Classification. You can check them out in the Projects section!";
     } else if (contactQuestions.some(word => userMessage.includes(word))) {
       return "You can contact Liza via email at rhsliza9@gmail.com or through her LinkedIn profile. All contact information is available in the Contact section.";
+    } else if (youthKeywords.some(w => userMessage.includes(w))) {
+      return "Sharmin was a winner at the Youth Led Innovation Lab in 2023 — recognized for applying AI to practical problems.";
+    } else if (internshipKeywords.some(w => userMessage.includes(w))) {
+      return "She completed a Data Science internship at CodeAlpha working on data cleaning, EDA, and model prototyping.";
+    } else if (uctcKeywords.some(w => userMessage.includes(w))) {
+      return "Sharmin serves as Research & Innovation Secretary at the UCTC Computer Club, organizing workshops and mentoring peers.";
     } else if (helpQuestions.some(word => userMessage.includes(word))) {
       return "I can tell you about Liza's skills, projects, education, and how to contact her. Just ask!";
     } else if (userMessage.includes('thank')) {
