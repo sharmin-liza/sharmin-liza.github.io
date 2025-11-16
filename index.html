@@ -12,9 +12,10 @@
     <nav>
       <h1>Sharmin Akter <span id="liza">Li<span id="l">z</span>a</span></h1>
       <ul>
-        <li><a href="#about">About</a></li>
+        <li><a href="#hero">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
         <li><button onclick="downloadCV()">Download CV</button></li>
@@ -29,12 +30,11 @@
     <section id="hero">
       <div class="hero-content">
         <div class="hero-text">
-          <h1>Hi, I'm <span>Sharmin Liza</span></h1>
+          <h1>Hi, I'm <span id="animated-name">Sharmin Liza</span></h1>
           <h2>Data Science & AI Enthusiast</h2>
-          <p>Turning data into insights and building intelligent solutions</p>
+          <p class="short-blurb">I build ML-driven solutions and love turning data into actionable insights. Passionate about research, mentoring, and AI for social impact.</p>
           <div class="hero-buttons">
-            <a href="#contact" class="btn-primary">Contact Me</a>
-            <a href="#projects" class="btn-secondary">View Projects</a>
+            <a href="#projects" class="btn-primary">View Projects</a>
           </div>
         </div>
         <div class="hero-image">          <img src="https://media.licdn.com/dms/image/v2/D5603AQFXQk1-0ynZBQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1688624261918?e=1764201600&v=beta&t=mPRj6JTNOsoo3xRYB803SS7qnx30rnKWRA6uHseqgUs" alt="Sharmin Liza">
@@ -43,36 +43,7 @@
       </div>
     </section>
 
-    <section id="about">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>
-            I am a passionate Computer Science student specializing in Data Science, Machine Learning, and Artificial Intelligence.
-            With a strong foundation in Python, Statistics, and Data Preprocessing, I solve real-world problems using tools like
-            Pandas, Scikit-learn, and TensorFlow.
-          </p>
-          <p>
-            I have worked on projects involving Air Quality Prediction, Network Intrusion,
-            Detection, and Iris Flower Classification. My goal is to leverage data to create meaningful impact through AI solutions.
-          </p>
-          <div class="about-stats">
-            <div class="stat-item">
-              <span class="stat-number">10+</span>
-              <span class="stat-label">Projects</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">5+</span>
-              <span class="stat-label">Technologies</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">3+</span>
-              <span class="stat-label">Years Learning</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <!-- About section removed; short blurb is placed under the name in the hero section -->
 
     <section id="skills">
       <h2 class="section-title">My Skills</h2>
@@ -83,40 +54,36 @@
             <span>Python</span>
           </li>
           <li>
-            <i class="fas fa-database"></i>
-            <span>Pandas</span>
-          </li>
-          <li>
-            <i class="fas fa-calculator"></i>
-            <span>NumPy</span>
-          </li>
-          <li>
-            <i class="fas fa-chart-line"></i>
-            <span>Matplotlib</span>
+            <i class="fas fa-chart-pie"></i>
+            <span>EDA</span>
           </li>
           <li>
             <i class="fas fa-database"></i>
             <span>SQL</span>
           </li>
           <li>
-            <i class="fas fa-chart-pie"></i>
-            <span>Data Analysis</span>
-          </li>
-          <li>
             <i class="fas fa-robot"></i>
             <span>Machine Learning</span>
           </li>
           <li>
-            <i class="fas fa-brain"></i>
-            <span>Scikit-learn</span>
-          </li>
-          <li>
-            <i class="fas fa-network-wired"></i>
-            <span>TensorFlow</span>
-          </li>
-          <li>
             <i class="fab fa-html5"></i>
-            <span>HTML/CSS/JS</span>
+            <span>HTML</span>
+          </li>
+          <li>
+            <i class="fab fa-css3-alt"></i>
+            <span>CSS</span>
+          </li>
+          <li>
+            <i class="fab fa-js-square"></i>
+            <span>JavaScript</span>
+          </li>
+          <li>
+            <i class="fas fa-brain"></i>
+            <span>Deep Learning</span>
+          </li>
+          <li>
+            <i class="fas fa-language"></i>
+            <span>NLP</span>
           </li>
         </ul>
       </div>
@@ -163,7 +130,7 @@
         </div>
       </div>
     </section> -->
-// ...existing code...
+<!-- cleaned placeholder -->
     <section id="projects">
       <h2 class="section-title">My Projects</h2>
       <div class="projects-container">
@@ -190,6 +157,30 @@
           <div class="project-tags"><span>Classification</span><span>Feature Engineering</span><span>Python</span><span>Scikit-learn</span></div>
           <a class="project-link" href="https://github.com/sharmin-liza/mlproject10000/blob/main/titanic_dataset.ipynb" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
         </div>
+        
+        <div class="project">
+          <div class="project-icon"><i class="fas fa-network-wired"></i></div>
+          <h3><a href="https://github.com/sharmin-liza/mlproject10000/blob/main/sdn-ddos%20(1).ipynb" target="_blank" rel="noopener noreferrer">SDN DDoS Analysis</a></h3>
+          <p>Analysis of SDN-based DDoS attacks — feature extraction, exploratory analysis and classification to detect malicious traffic.</p>
+          <div class="project-tags"><span>Cybersecurity</span><span>Network Analysis</span><span>Python</span></div>
+          <a class="project-link" href="https://github.com/sharmin-liza/mlproject10000/blob/main/sdn-ddos%20(1).ipynb" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+
+        <div class="project">
+          <div class="project-icon"><i class="fas fa-heartbeat"></i></div>
+          <h3><a href="https://github.com/sharmin-liza/mlproject10000/blob/main/breast_cancer_prediction.ipynb" target="_blank" rel="noopener noreferrer">Breast Cancer Prediction</a></h3>
+          <p>Classification pipeline for breast cancer detection — preprocessing, model training and evaluation using common ML algorithms.</p>
+          <div class="project-tags"><span>Machine Learning</span><span>Classification</span><span>Python</span></div>
+          <a class="project-link" href="https://github.com/sharmin-liza/mlproject10000/blob/main/breast_cancer_prediction.ipynb" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
+
+        <div class="project">
+          <div class="project-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3><a href="https://github.com/sharmin-liza/mlproject10000/blob/main/ntd-on-kddcup1991%20(4).ipynb" target="_blank" rel="noopener noreferrer">NTD on KDDCup1991</a></h3>
+          <p>Network traffic detection experiments on the KDDCup1991 dataset — anomaly detection and evaluation of detection methods.</p>
+          <div class="project-tags"><span>Anomaly Detection</span><span>Network Security</span><span>Python</span></div>
+          <a class="project-link" href="https://github.com/sharmin-liza/mlproject10000/blob/main/ntd-on-kddcup1991%20(4).ipynb" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> View on GitHub</a>
+        </div>
       </div>
     </section>
 
@@ -206,6 +197,24 @@
             <p class="duration">2021 - Present</p>
             <p class="description">Specializing in Data Science and Artificial Intelligence with coursework in machine learning, data mining, and big data analytics.</p>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience">
+      <h2 class="section-title">Experience</h2>
+      <div class="experience-container container">
+        <div class="experience-item">
+          <h3>Youth Led Innovation Lab — Winner (2023)</h3>
+          <p>Recognized for innovative work applying AI to real-world problems and awarded at the Youth Led Innovation Lab, 2023.</p>
+        </div>
+        <div class="experience-item">
+          <h3>Internship — Data Science, CodeAlpha</h3>
+          <p>Completed a Data Science internship at CodeAlpha working on data cleaning, exploratory analysis, and model prototyping.</p>
+        </div>
+        <div class="experience-item">
+          <h3>Research & Innovation Secretary — UCTC Computer Club</h3>
+          <p>Leading student research activities, organizing workshops, and mentoring peers in projects and competitions.</p>
         </div>
       </div>
     </section>
@@ -256,9 +265,10 @@
       <div class="footer-links">
         <h3>Quick Links</h3>
         <ul>
-          <li><a href="#about">About</a></li>
+          <li><a href="#hero">About</a></li>
           <li><a href="#skills">Skills</a></li>
           <li><a href="#projects">Projects</a></li>
+          <li><a href="#experience">Experience</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </div>
